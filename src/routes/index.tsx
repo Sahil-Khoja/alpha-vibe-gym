@@ -1,24 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Navbar from "@/components/site/Navbar";
+import Hero from "@/components/site/Hero";
+import Stats from "@/components/site/Stats";
+import Programs from "@/components/site/Programs";
+import Trainers from "@/components/site/Trainers";
+import Pricing from "@/components/site/Pricing";
+import Gallery from "@/components/site/Gallery";
+import Testimonials from "@/components/site/Testimonials";
+import CTABanner from "@/components/site/CTABanner";
+import Contact from "@/components/site/Contact";
+import Footer from "@/components/site/Footer";
+import MobileCTA from "@/components/site/MobileCTA";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "IronPulse — Premium 24/7 Gym & Fitness Club" },
+      {
+        name: "description",
+        content:
+          "IronPulse is a premium fitness club with world-class trainers, 24/7 access, strength, CrossFit, yoga and nutrition programs. Start your free trial today.",
+      },
+      { property: "og:title", content: "IronPulse — Premium 24/7 Gym & Fitness Club" },
+      {
+        property: "og:description",
+        content:
+          "World-class trainers, cutting-edge equipment, and a community built to push you further. Book your free trial.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-dvh bg-background text-foreground overflow-x-clip scroll-smooth">
+      <Navbar />
+      <main>
+        <Hero />
+        <Stats />
+        <Programs />
+        <Trainers />
+        <Pricing />
+        <Gallery />
+        <Testimonials />
+        <CTABanner />
+        <Contact />
+      </main>
+      <Footer />
+      <MobileCTA />
     </div>
   );
 }
