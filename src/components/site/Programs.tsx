@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { GiWeightLiftingUp, GiRunningShoe, GiMuscleUp, GiMeditation, GiKettlebell, GiKnifeFork } from "react-icons/gi";
+import { GiWeightLiftingUp, GiRunningShoe, GiMuscleUp, GiMeditation, GiKettlebellSimple, GiKnifeFork } from "react-icons/gi";
 import { SectionHeader } from "./Section";
 
 const programs = [
