@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { GiWeightLiftingUp, GiRunningShoe, GiMuscleUp, GiMeditation, GiKettlebellSimple, GiKnifeFork } from "react-icons/gi";
+import { GiWeightLiftingUp, GiRunningShoe, GiMuscleUp, GiMeditation, GiWeight, GiKnifeFork } from "react-icons/gi";
 import { SectionHeader } from "./Section";
 
 const programs = [
@@ -8,7 +8,7 @@ const programs = [
   { icon: GiRunningShoe, title: "Fat Loss", desc: "HIIT + metabolic conditioning to torch fat and reshape your physique." },
   { icon: GiMuscleUp, title: "CrossFit", desc: "Functional, high-intensity workouts that build athletes, not just bodies." },
   { icon: GiMeditation, title: "Yoga & Mobility", desc: "Flexibility, breath, and recovery — the foundation of lifelong movement." },
-  { icon: GiKettlebell, title: "Personal Training", desc: "1-on-1 coaching, custom periodization, weekly accountability." },
+  { icon: GiWeight, title: "Personal Training", desc: "1-on-1 coaching, custom periodization, weekly accountability." },
   { icon: GiKnifeFork, title: "Nutrition Coaching", desc: "Macro-based meal plans built for your goals, not generic templates." },
 ];
 
